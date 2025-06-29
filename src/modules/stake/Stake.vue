@@ -130,10 +130,11 @@ import idl from '@/idl/solana_stake.json';
 import { useToast } from 'primevue';
 
 const toast = useToast();
-const PROGRAM_ID = new PublicKey('EHHZ67oF9xMX2cuRKtiKdL2rVsV8dQ3CnQcpARcmt5UC');
-// use 'http://127.0.0.1:8899' se for local
-const network = 'http://127.0.0.1:8899';
+const PROGRAM_ID = new PublicKey(import.meta.env.VITE_PROGRAM_ID);
+const network = import.meta.env.VITE_SOLANA_NETWORK;
 const connection = new Connection(network, 'processed');
+
+console.log(network, PROGRAM_ID)
 
 const phantomInstalled = ref(false);
 const walletAddress = ref<string | null>(null);
