@@ -1,0 +1,20 @@
+/* === Base.css: estilos globais da aplicação === */
+
+body {
+  background: #181d23 !important;
+  color: #e4eaf0;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'Roboto', Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
